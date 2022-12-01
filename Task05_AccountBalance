@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+
+int main()
+{
+	int depositOperations;
+	std::cin >> depositOperations;
+
+	double balance = 0;
+
+	std::cout.precision(2);
+	std::cout << std::fixed;
+
+	for (int i = 0; i < depositOperations; i++)
+	{
+		double amount;
+		std::cin >> amount;
+
+		if (amount < 0) {
+			std::cout << "Invalid operation!" << std::endl;
+			break;
+		}
+
+		balance += amount;
+
+		std::cout << "Increase: " << amount << std::endl;
+	}
+	
+	std::cout << "Total: " << balance << std::endl;
+
+	return 0;
+}
