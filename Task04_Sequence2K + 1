@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+
+int main()
+{
+	int n;
+	std::cin >> n;
+
+	int current = 1;
+	while (current <= n)
+	{
+		std::cout << current << std::endl;
+		current = current * 2 + 1;
+	}
+
+	return 0;
+}
